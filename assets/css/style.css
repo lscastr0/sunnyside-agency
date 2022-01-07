@@ -27,10 +27,12 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth
 }
 
 body{
     font-size: 1.8rem;
+    font-family: var(--Barlow);
 }
 
 h2{
@@ -62,24 +64,41 @@ a{
     max-width: 120rem;
     margin: 0 auto;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .top-bar ul{
     display: flex;
     list-style: none;
-   
-    
 }
 
 .top-bar ul li a{
     display: block;
-    padding: 2rem;
-    
+    padding: 1.3rem 2rem;
+    color: var(--White);
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.top-bar ul li .menu-hover::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--Yellow);
+    bottom: 0;
+    left: 50%;
+    transition: all ease-in-out 300ms;
+}
+
+.top-bar ul li .menu-hover:hover::before{
+    width: 60%;
+    left: 20%;
 }
 
 .top-bar ul li a:hover{
     color: white;
+    
 }
 
 .logo{
@@ -90,4 +109,36 @@ a{
     opacity: 0;
 }
 
+#contact a{
+    border-radius: 3rem;
+    transition: all ease-in-out 360ms;
+    text-transform: uppercase;
+    background-color: var(--White);
+    color: black;
+    
+}
 
+#contact{
+    
+    padding-left: 2rem;
+}
+
+#message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#message h2{
+    text-align: center;
+    padding: 5rem 0;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: var(--White);
+}
+
+#arrow{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
