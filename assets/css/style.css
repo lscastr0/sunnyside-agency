@@ -16,6 +16,7 @@
     --Dark-grayish-blue: hsl(232, 10%, 55%);
     --Grayish-blue: hsl(210, 4%, 67%);
     --White: hsl(0, 0%, 100%);
+    --New-White: #F6F6FE;
 
     --Barlow: 'Barlow', sans-serif;
     --Fraunces: 'Fraunces', serif;
@@ -35,6 +36,7 @@ html{
 body{
     font-size: 1.8rem;
     font-family: var(--Barlow);
+    font-weight: 600;
 }
 
 h2{
@@ -99,8 +101,7 @@ a{
 }
 
 .top-bar ul li a:hover{
-    color: white;
-    
+    color: var(--White);
 }
 
 .logo{
@@ -117,11 +118,9 @@ a{
     text-transform: uppercase;
     background-color: var(--White);
     color: black;
-    
 }
 
 #contact{
-    
     padding-left: 2rem;
 }
 
@@ -130,6 +129,7 @@ a{
     align-items: center;
     justify-content: center;
 }
+
 #message h2{
     text-align: center;
     padding: 5rem 0;
@@ -141,7 +141,7 @@ a{
 #arrow{
     display: flex;
     justify-content: center;
-    padding: 3rem;
+    margin: 2rem 0;
 }
 
 #services{
@@ -161,8 +161,7 @@ a{
     align-items: center;
     flex-flow: column wrap;
     padding: 2rem;
-    background-color: #F6F6FE;
-    
+    background-color: var(--New-White);
 }
 
 .section-color-white p{
@@ -213,4 +212,58 @@ a{
 
 .red-link:hover::after{
     background-color: var(--red-link)
+}
+
+#section-client{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: var(--New-White);
+    min-height: 100vh;
+}
+
+#section-client h2{
+    text-align: center;
+    padding: 5rem;
+    color: var(--Grayish-blue);
+    font-family: var(--Fraunces);
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.client-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.client-content img{
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+    max-width: 20%;
+}
+
+.client-content q{
+    display: block;
+    padding: 5rem 0;
+    text-align: center;
+    color: var(--Very-dark-grayish-blue);
+}
+
+.client-content p{
+    text-align: center;
+    font-family: var(--Fraunces);
+    font-weight: 700;
+}
+
+.profession{
+    padding: 1rem 0;
+    color: var(--Grayish-blue);
+    font-size: 1.5rem;
 }
